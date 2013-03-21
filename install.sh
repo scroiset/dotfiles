@@ -35,15 +35,22 @@ for i in _*
     done
 exit
 else
-    for i in _*
-        do
-           link_file $i
-        done
+    echo "What dotfile to install ?  Enter to install all or a dotfile name"
+    read W 
+
+    if [ -z "$W" ]; then
+
+	echo "Install all"
+    	for i in _*
+    	    do
+    	       link_file $i
+    	    done
+    else
+	[ -f $W ] && link_file $W && echo "$W installed"
+	[ -d $W ] && link_file $W && echo "$W installed"
     fi
+fi
 
 git submodule update --init --recursive
 git submodule foreach --recursive git pull origin master
 
-# setup command-t
-#cd _vim/bundle/command-t
-#rake make
