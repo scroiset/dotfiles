@@ -8,6 +8,9 @@ syntax on
 filetype on
 filetype plugin indent on
 
+" remap <leader>
+let mapleader = ","
+
 set foldmethod=indent
 set foldlevel=99
 
@@ -30,6 +33,14 @@ map <leader>j :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 let g:ropevim_autoimport_modules = ["os", "shutil", "libvirt"]
 
+" git fugitive
+" Gblame / Gwrite / Gcommit
+"XXX %{fugitive#statusline()}
+
+" Ack (searching in project) https://github.com/mileszs/ack.vim
+" need to install paclage : apt-get install ack-grep
+nmap <leader>a <Esc>:Ack!
+
 " Add the virtualenv's site-packages to vim path
 py << EOF
 import os.path
@@ -41,3 +52,8 @@ if 'VIRTUAL_ENV' in os.environ:
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
     execfile(activate_this, dict(__file__=activate_this))
 EOF
+
+
+" TOTO
+" * backup history files
+" * ctags full indexations .. 
