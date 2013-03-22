@@ -61,6 +61,9 @@ EOF
 " https://raw.github.com/michalbachowski/vim-wombat256mod/master/colors/wombat256mod.vim
 colorscheme wombat256mod
 
+"ctags & taglist
+let Tlist_WinWidth = 33
+map <F4> :TlistToggle<cr>
+
 " TOTO
 " * backup history files
-" * ctags full indexations .. 
