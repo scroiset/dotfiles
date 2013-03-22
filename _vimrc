@@ -27,6 +27,9 @@ set completeopt=menuone,longest,preview
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
 
+" Python-mode 
+let g:pymode_folding = 0
+
 " Ropevim
 " https://github.com/peplin/ropevim !! imported from python-mode github-repo
 map <leader>j :RopeGotoDefinition<CR>
