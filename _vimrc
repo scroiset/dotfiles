@@ -8,6 +8,7 @@ syntax on
 filetype on
 filetype plugin indent on
 
+set number
 " remap <leader>
 let mapleader = ","
 
@@ -56,6 +57,9 @@ if 'VIRTUAL_ENV' in os.environ:
     execfile(activate_this, dict(__file__=activate_this))
 EOF
 
+" colorize
+" https://raw.github.com/michalbachowski/vim-wombat256mod/master/colors/wombat256mod.vim
+colorscheme wombat256mod
 
 " TOTO
 " * backup history files
