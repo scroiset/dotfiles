@@ -8,6 +8,8 @@ syntax on
 filetype on
 filetype plugin indent on
 
+set hlsearch
+
 set number
 " remap <leader>
 let mapleader = ","
@@ -23,7 +25,7 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 set completeopt=menuone,longest,preview
 
-" pydoc : <leader>pw 
+" pydoc : <leader>pw (changeit!)
 
 " NERDTree
 map <leader>n :NERDTreeToggle<CR>
@@ -33,7 +35,7 @@ let g:pymode_folding = 0
 
 " Ropevim
 " https://github.com/peplin/ropevim !! imported from python-mode github-repo
-map <leader>j :RopeGotoDefinition<CR>
+map <leader>d :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
 let g:ropevim_autoimport_modules = ["os", "shutil", "libvirt"]
 
@@ -59,10 +61,10 @@ EOF
 
 " colorize
 " https://raw.github.com/michalbachowski/vim-wombat256mod/master/colors/wombat256mod.vim
-colorscheme wombat256mod
+"colorscheme wombat256mod
 
 "ctags & taglist
-let Tlist_WinWidth = 33
+let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
 
 " TOTO
