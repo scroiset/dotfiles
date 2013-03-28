@@ -66,6 +66,10 @@ EOF
 "ctags & taglist
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+" ctags keys
+" get definition under function/method  : ctrl-]
+" go back to origin again to function/method call : ctrl-t
+" ta / ts / tn tp / tf tl
 
 " TOTO
 " * backup history files
