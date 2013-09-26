@@ -7,6 +7,7 @@ call pathogen#helptags()
 syntax on
 filetype on
 filetype plugin indent on
+set hlsearch
 
 set hlsearch
 
@@ -16,6 +17,7 @@ let mapleader = ","
 
 set foldmethod=indent
 set foldlevel=99
+colorscheme torte
 
 "pyflakes
 let g:pyflakes_use_quickfix = 0
@@ -73,3 +75,9 @@ map <F4> :TlistToggle<cr>
 
 " TOTO
 " * backup history files
+
+hi Search guibg=LightBlue
+
+" Yaml
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+
