@@ -12,10 +12,16 @@
         lpush = "!git --no-pager log origin/$(git currentbranch)..HEAD --oneline"
         lpull = "!git --no-pager log HEAD..origin/$(git currentbranch) --oneline"
         whatsnew = "!git diff origin/$(git currentbranch)...HEAD"
+        whatstopush = "!git log --stat origin/$(git currentbranch)...HEAD"
         whatscoming = "!git diff HEAD...origin/$(git currentbranch)"
         currentbranch = "!git branch | grep \"^\\*\" | cut -d \" \" -f 2"
 [user]
 	email = swann@oopss.org
+	#email = swann.croiset@bull.net
 	name = Swann Croiset
 [color]
-	ui = true
+	ui = auto
+[gitreview]
+	username = swann
+[push]
+	default = current
