@@ -9,12 +9,15 @@
         unstage = reset HEAD
         lol = log --graph --decorate --pretty=oneline --abbrev-commit
         lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
         lpush = "!git --no-pager log origin/$(git currentbranch)..HEAD --oneline"
         lpull = "!git --no-pager log HEAD..origin/$(git currentbranch) --oneline"
         whatsnew = "!git diff origin/$(git currentbranch)...HEAD"
         whatstopush = "!git log --stat origin/$(git currentbranch)...HEAD"
         whatscoming = "!git diff HEAD...origin/$(git currentbranch)"
         currentbranch = "!git branch | grep \"^\\*\" | cut -d \" \" -f 2"
+        top20 = "!git shortlog --since='1 year' --no-merges -nes | nl | head -20"
+        top40 = "!git shortlog --since='1 year' --no-merges -nes | nl | head -40"
 [user]
 	email = swann@oopss.org
 	#email = swann.croiset@bull.net
@@ -25,3 +28,7 @@
 	username = swann
 [push]
 	default = current
+#[diff]
+#	external = meld
+[core]
+	excludesfile = ~/.gitignore
