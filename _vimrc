@@ -19,7 +19,7 @@ set foldmethod=indent
 set foldlevel=99
 colorscheme torte
 
-"pyflakes
+"pyflakes (code checking)
 let g:pyflakes_use_quickfix = 0
 
 "supertab
@@ -81,3 +81,4 @@ hi Search guibg=LightBlue
 " Yaml
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
+set list
