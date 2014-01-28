@@ -3,6 +3,14 @@ dotfiles
 
 my dotfiles
 
+VIM
+===
+
+* add a submodle :
+
+git submodule add https://github.com/kien/ctrlp.vim.git  _vim/bundle/ctrlp
+
+
 ToDo
 ====
 
