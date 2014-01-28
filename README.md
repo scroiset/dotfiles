@@ -6,9 +6,15 @@ my dotfiles
 VIM
 ===
 
-* add a submodle :
+* add a submodule :
 
 git submodule add https://github.com/kien/ctrlp.vim.git  _vim/bundle/ctrlp
+
+* rm a submodule
+
+git submodule deinit (>1.8)
+
+or http://davidwalsh.name/git-remove-submodule
 
 
 ToDo

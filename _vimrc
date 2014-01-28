@@ -68,6 +68,7 @@ EOF
 "ctags & taglist
 let Tlist_WinWidth = 50
 map <F4> :TlistToggle<cr>
+map <F5> :TagbarToggle<cr>
 " ctags keys
 " get definition under function/method  : ctrl-]
 " go back to origin again to function/method call : ctrl-t
