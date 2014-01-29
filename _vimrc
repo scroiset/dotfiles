@@ -9,9 +9,9 @@ filetype on
 filetype plugin indent on
 set hlsearch
 
-set hlsearch
-
+set list
 set number
+
 " remap <leader>
 let mapleader = ","
 
@@ -82,4 +82,11 @@ hi Search guibg=LightBlue
 " Yaml
 au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
 
-set list
+
+" tab navigation like irssi
+map <M-Left> :tabprevious<CR>
+map <M-Right>   :tabnext<CR>
+map <C-t>     :tabnew<CR>
+imap <M-Left> <Esc>:tabprevious<CR>i
+imap <M-Right>   <Esc>:tabnext<CR>i
+imap <C-t>     <Esc>:tabnew<CR>i
