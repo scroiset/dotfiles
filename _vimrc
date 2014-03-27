@@ -34,6 +34,10 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Python-mode 
 let g:pymode_folding = 0
+let g:pymode_lint_on_write = 0
+let g:pymode_lint_ignore = "E501,W,C901"
+map <leader>c :PymodeLint<CR>
+map <leader>C :PymodeLintAuto<CR>
 
 " Ropevim
 " https://github.com/peplin/ropevim !! imported from python-mode github-repo
