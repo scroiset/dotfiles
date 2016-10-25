@@ -31,3 +31,6 @@
 [submodule "_vim/bundle/minibufexpl"]
 	path = _vim/bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim
+[submodule "_vim/bundle/vim-json"]
+	path = _vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
