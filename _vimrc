@@ -11,6 +11,7 @@ set hlsearch
 
 set list
 set number
+set colorcolumn=80
 
 " remap <leader>
 let mapleader = ","
@@ -43,6 +44,7 @@ map <leader>C :PymodeLintAuto<CR>
 " https://github.com/peplin/ropevim !! imported from python-mode github-repo
 map <leader>d :RopeGotoDefinition<CR>
 map <leader>r :RopeRename<CR>
+let g:pymode_rope_complete_on_dot = 0
 let g:ropevim_autoimport_modules = ["os", "shutil", "libvirt"]
 
 " git fugitive
@@ -78,8 +80,11 @@ map <F5> :TagbarToggle<cr>
 " go back to origin again to function/method call : ctrl-t
 " ta / ts / tn tp / tf tl
 
-" TOTO
-" * backup history files
+set backup
+set writebackup
+au BufWritePre * let &backupext = '%' . substitute(expand("%:p:h"), "/" , "%" , "g") . "%" . strftime("%Y.%m.%d.%H.%M.%S")
+au VimLeave * !cp % ~/.vim_backups/$(echo %:p | sed 's/\(.*\/\)\(.*\)/\2\/\1/g' | sed 's/\//\%/g')$(date +\%Y.\%m.\%d.\%H.\%M.\%S).wq
+set backupdir=~/.vim_backups/
 
 hi Search guibg=LightBlue
 
@@ -94,3 +99,8 @@ map <C-t>     :tabnew<CR>
 imap <M-Left> <Esc>:tabprevious<CR>i
 imap <M-Right>   <Esc>:tabnext<CR>i
 imap <C-t>     <Esc>:tabnew<CR>i
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab

@@ -1,14 +1,17 @@
 [alias]
- 	st = status
+        st = status
         stp = status --porcelain
         ci = commit
-        br = branch
+        br = branch -vv
+        r = remote -v
         co = checkout
         rz = reset --hard HEAD
+        logs = log --stat
+        logp = log -p
         pullr = pull --rebase
         unstage = reset HEAD
         lol = log --graph --decorate --pretty=oneline --abbrev-commit
-        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+        lola = log --graph --decorate --pretty=oneline --abbrev-commit --all --tags
         lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
         lpush = "!git --no-pager log origin/$(git currentbranch)..HEAD --oneline"
         lpull = "!git --no-pager log HEAD..origin/$(git currentbranch) --oneline"
@@ -19,9 +22,10 @@
         top20 = "!git shortlog --since='1 year' --no-merges -nes | nl | head -20"
         top40 = "!git shortlog --since='1 year' --no-merges -nes | nl | head -40"
 [user]
-	email = swann@oopss.org
-	#email = swann.croiset@bull.net
+	#email = swann@oopss.org
+	email = scroiset@mirantis.com
 	name = Swann Croiset
+	signingkey = 441D327F
 [color]
 	ui = auto
 [gitreview]
@@ -29,6 +33,6 @@
 [push]
 	default = current
 #[diff]
-#	external = meld
+#	external = ~/.gitdiff
 [core]
 	excludesfile = ~/.gitignore

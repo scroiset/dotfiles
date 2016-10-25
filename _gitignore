@@ -4,3 +4,6 @@
 *.egg
 *.swn
 .*un~
+*.deb
+*.rpm
+*.pyc
