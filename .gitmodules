@@ -34,3 +34,6 @@
 [submodule "_vim/bundle/vim-json"]
 	path = _vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "_vim/bundle/salt-vim"]
+	path = _vim/bundle/salt-vim
+	url = git@github.com:saltstack/salt-vim.git
